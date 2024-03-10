@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html class="bg-base-100 text-white font-sans">
+<head>
+    <meta charset="UTF-8">
+    <title>Lego Collection</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <%- include('partials/navbar', {page: '/'}) %>
+
+    <div class="container mx-auto">
+        <!-- Welcome Section -->
+        <div class="hero bg-gray-900 bg-opacity-15 text-white text-center mt-3 mb-3 p-40 rounded-lg">
+            <div class="mx-auto">
+                <h2 class="text-4xl font-bold text-black mb-4">Welcome</h2>
+                <p class="text-2xl font-bold text-black mb-4">Unleash your inner builder and embark on a fascinating journey
+                    through the colorful realm of Lego.</p>
+                <a href="/lego/sets" class="btn btn-primary  hover:bg-red-700 ">Get Started</a>
+            </div>
+        </div>
+        
+         <!-- Grid Section -->
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4">
+            <!-- Card 1 -->
+            <div>
+                <div class="card w-96 bg-white p-6 rounded-lg shadow-xl">
+                  <figure class="px-10 pt-10">
+                    <img
+                      src="https://cdn.rebrickable.com/media/sets/001-1.jpg"
+                      alt="Lego Set"
+                      class="rounded-lg mb-4"
+                    />
+                  </figure>
+                  <div class="card-body items-center">
+                    <h2 class="nameOfSet text-3xl text-black font-bold">Gears</h2>
+                    <p class="desc text-xl text-black pb-10">
+                      This set was released in America (USA/CAN) by Samsonite in 1965.
+                    </p>
+                    <div class="mt-4">
+                      <a href="/lego/sets/001-1"
+                        ><button class="btn btn-primary">View</button></a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+                        
+              <!-- Card 2 -->
+              <div>
+                <div class="card w-96 bg-white p-6 rounded-lg shadow-xl">
+                  <figure class="px-10 pt-10">
+                    <img
+                      src="https://cdn.rebrickable.com/media/sets/028-1.jpg"
+                      alt="Lego Set"
+                      class="rounded-lg mb-4"
+                    />
+                  </figure>
+                  <div class="card-body items-center">
+                    <h2 class="nameOfSet text-3xl text-black font-bold">Nursery Furniture</h2>
+                    <p class="desc text-xl text-black pb-10">
+                        Classic Duplo Set - Nursery for your minis.
+                    </p>
+                    <div class="mt-4">
+                      <a href="/lego/sets/028-1"
+                        ><button class="btn btn-primary">View</button></a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            <!-- Card 3 -->
+            <div>
+                <div class="card w-96 bg-white p-6 rounded-lg shadow-xl">
+                  <figure class="px-10 pt-10">
+                    <img
+                      src="https://cdn.rebrickable.com/media/sets/03093-1.jpg"
+                      alt="Lego Set"
+                      class="rounded-lg mb-4"
+                    />
+                  </figure>
+                  <div class="card-body items-center">
+                    <h2 class="nameOfSet text-3xl text-black font-bold">The Race to Build It Board Game</h2>
+                    <p class="desc text-xl text-black pb-10">
+                        Classic game - released in 1999.
+                    </p>
+                    <div class="mt-4">
+                      <a href="/lego/sets/03093-1"
+                        ><button class="btn btn-primary">View</button></a
+                      >
+                    </div>
+                  </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

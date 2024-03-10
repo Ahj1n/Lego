@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html class="bg-base-100 text-white font-sans">
+<head>
+    <meta charset="UTF-8">
+    <title>404 - Not found</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <%- include('partials/navbar', {page: ''}) %>
+
+    <div class="text-red-600 text-center m-20">
+        <h2 class="text-4xl mb-10">Oops!<br>404 Error: <%= message %></h2>
+    </div>    
+</body>

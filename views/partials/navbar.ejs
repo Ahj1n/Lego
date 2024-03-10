@@ -1,0 +1,19 @@
+<div class="navbar bg-base-700 flex flex-col lg:flex-row items-center justify-between p-6 rounded-3xl shadow-md">
+    <div class="flex-1">
+        <a href="/" class="btn btn-ghost text-xl <%= (page == "/") ? 'active' : '' %>">LEGO Collection</a>
+    </div>
+    <div class="flex-none">
+        <ul class="menu menu-horizontal px-1">
+            <li>
+                <details>
+                    <summary class="text-black font-bold mr-2">More</summary>
+                    <ul class="p-2 bg-base-100 rounded-t-none">
+                        <li><a class="<%= (page == "/about") ? 'active' : '' %> bg-gray-900 text-black bg-opacity-20 text-base rounded-md" href="/about">About</a></li>
+                        <li><a class="<%= (page == "/lego/sets") ? 'active' : '' %> bg-gray-900 text-black bg-opacity-20 text-base rounded-md" href="/lego/sets">Collection</a></li>
+                    </ul>
+                </details>
+            </li>
+        </ul>
+    </div>
+</div>
+

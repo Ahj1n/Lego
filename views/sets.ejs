@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="bg-base-100 text-white font-sans">
+<head>
+    <meta charset="UTF-8">
+    <title>Collection</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <%- include('partials/navbar', {page: '/lego/sets'}) %>
+
+    <div class="container mx-auto">
+        <div class="hero bg-gray-900 bg-opacity-15 text-white text-center mt-3 mb-1 p-40 rounded-lg">
+            <div class="mx-auto">
+                <h2 class="text-4xl mb-3 text-black font-bold">Collection</h2>
+                <p class="text-2xl mb-2 text-black">Take a look at the LEGO collection. Click the theme</p>
+                <div class="flex justify-center items-center">
+                    <p class="text-2xl mr-2 text-black">to filter by themes:</p>
+                    <a href="/lego/sets?theme=Basic" class="btn btn-sm  bg-red-600 text-white border-none text-base rounded-md hover:bg-red-700">Basic</a>
+                    <a href="/lego/sets?theme=Technic" class="btn btn-sm mx-1  bg-red-600 text-white border-none text-base rounded-md hover:bg-red-700">Technic</a>
+                    <a href="/lego/sets?theme=Books" class="btn btn-sm mx-1  bg-red-600 text-white border-none text-base rounded-md hover:bg-red-700">Books</a>
+                </div>
+            </div>        
+        </div>
+
+       <table class="table-auto w-full text-lg" style="border-collapse: separate; border-spacing: 0 7px;">
+        <tbody>
+            <% sets.forEach((set) => { %>
+                <tr>
+                    <td class="avatar w-40 h-40 shadow-md">
+                        <img src="<%= set.img_url %>" alt="<%= set.name %>" class="rounded-md">
+                    </td>
+                    <td class="align-middle text-red-600">
+                        <span class="font-bold"><%= set.name %></span> | <a href="/lego/sets?theme=<%= set.theme %>" class="btn btn-sm bg-gray-900 text-black bg-opacity-20 border-none text-base rounded-md hover:bg-gray-900 hover:bg-opacity-30"> <%= set.theme %></a>
+                    </td>
+                    <td class="align-middle text-red-600">
+                        <span class="font-bold">Year: </span> <%= set.year %>  
+                    </td>
+                    <td class="align-middle text-red-600">
+                        <span class="font-bold">Parts: </span> <%= set.num_parts %>  
+                    </td>
+                    <td class="align-middle text-red-600">
+                        <a href="/lego/sets/<%= set.set_num %>" class="btn btn-lg bg-red-600 border-none text-base text-white rounded-md hover:bg-red-700">Details</a>
+                    </td>
+                </tr>
+            <% }); %>
+        </tbody>
+       </table>
+    </div>
+</body>
+</html>
