@@ -8,7 +8,7 @@
 * 
 *  Name: Franz Balite     Student ID: 142546209     Date: 03/09/24
 *
-*  Published URL: https://victorious-trunks-slug.cyclic.app
+*  Published URL: https://cute-erin-squirrel-vest.cyclic.app
 *
 ********************************************************************************/ 
 const legoData = require("./modules/legoSets");
